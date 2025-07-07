@@ -1,0 +1,35 @@
+I have a tech talk on wednesday 7th july 2025. I need to prepare a presentation for this.
+I will need your help in this.
+The tech talk I have planned is on aichat - All-in-one LLM CLI tool.
+
+Basically it is a tool which we can use in our command line where you can insert the API key of the LLM such as Gemini and we can use it for various purpose.
+
+Firstly, it gives command line prompting service where user can ask question directly to the gemini or whichever model's API they provided in the beginning.
+such as who is the prime minister of india or write a C++ code for linked list.
+They just need to install the package from https://github.com/sigoden/aichat and then simply just extract the folder and inside the extracted folder, you will find aichat.exe, simply just run it and give it the gemini API key and then add that particular folder into the environment variable and then simply open a new command prompt and write "aichat". then it will take you to REPL mode. You can simply ask any question to aichat and it will answer. it works as the command line chatgpt in simple non-technical terms.
+
+
+Secondly, REPL mode, after doing the firstly part, you can create various roles such as one for coding purpose, one for research purpose or etc. To create a role simply just write ".role ROLE_NAME" and it will create that role. And to use an existing role, simply write ".role EXISTING_ROLE_NAME". and then you can do that specific task for which you created this role. Then let say, I have a role named as coding like ".role coding" then if I ask a question "implementation of array in C++ using vector library" then it will show me the implementation. But let say you want to ask a lot of question or want to keep that context aware in that chat on that particular question "Implementation of array in C++ using vector library" then you can ask there by simply writing ".session" after that question command, you can also verify this by writing "what was the question?" and it will tell you the question for which you created this session. you can also save a session by doing ".exit" and it will prompt .exit
+> Save session? Y/n then select Y for yes and n for No.
+
+Thirdly, we have multi-form input which can be run such as first open cmd write aichat then ".file dir/" for example ".file E:\demo" then it will simply read the files that you have kept there in that folder and gives a summary.
+
+Fourth, IT is the RAG. We can create a RAG very simply here by providing our personal internal data to it and ask the question based on by simply writing ".rag RAG_NAME" and then it will show you the embedding model, select anyone of those. then set the chunk size (Number of characters), then set chunk overlay (number of character a chunk can have from prev chunks) then it will ask for document then add the document directory or the url of that document and then it will save it. then you can ask question related to that document you gave it. It wont answer anything else except that document related question as the context is set within it only.
+
+Fifth, it also gives function calling features and AI Agents that I have not experimented yet.
+
+sixthly, it also has local server for LLM playground and LLM agent, just run "aichat --serve" and it will show the arena and playground url like 
+$ aichat --serve
+Chat Completions API: http://127.0.0.1:8000/v1/chat/completions
+Embeddings API:       http://127.0.0.1:8000/v1/embeddings
+Rerank API:           http://127.0.0.1:8000/v1/rerank
+LLM Playground:       http://127.0.0.1:8000/playground
+LLM Arena:            http://127.0.0.1:8000/arena?num=2
+
+then open playground, play with LLM by changing temperature, Top-P and test the LLMs.
+With LLM arena, you can compare two LLM models with same prompts.
+
+Now we need to create a proper PPT for it.
+
+
+ 
